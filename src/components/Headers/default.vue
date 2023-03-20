@@ -1,13 +1,24 @@
 <template>
   <a-layout-header>
     <div class="hearder-container">
-      <div class="hearder-logo">
-        <img
-          class="logo-img"
-          referrerpolicy="no-referrer"
-          src="https://lanhu.oss-cn-beijing.aliyuncs.com/psfpxdjpw4yxkr19k9tb6ygjgk3mjcerk9y5j2une1nn4s4ib659882c-0ad7-4a13-87f2-7505c77bb7a4"
-        />
-        <span class="logo-text">斐宸校园</span>
+      <div class="hearder-left">
+        <div class="hearder-logo">
+          <img
+            class="logo-img"
+            referrerpolicy="no-referrer"
+            src="https://lanhu.oss-cn-beijing.aliyuncs.com/psfpxdjpw4yxkr19k9tb6ygjgk3mjcerk9y5j2une1nn4s4ib659882c-0ad7-4a13-87f2-7505c77bb7a4"
+          />
+          <span class="logo-text">斐宸校园</span>
+        </div>
+        <div class="header-nav">
+          <ul>
+            <li class="header-nav-seleted">首页</li>
+            <li>宿舍管理</li>
+            <li>访客管理</li>
+            <li class="header-nav-seleted">教务管理</li>
+            <li>考勤管理</li>
+          </ul>
+        </div>
       </div>
       <div class="hearder-right">
         <!-- 搜索框 -->
@@ -79,6 +90,31 @@ export default {
   display: flex;
   justify-content: space-between;
 
+  .hearder-left {
+    display: flex;
+
+    .header-nav {
+      ul {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        .header-nav-seleted {
+          border-bottom: 2px solid #fff;
+        }
+        li {
+          width: auto;
+          padding: 8px;
+          font-family: Microsoft YaHei;
+          font-weight: 400;
+          color: #ffffff;
+          line-height: 22px;
+          margin-left: 50px;
+        }
+      }
+    }
+  }
   .user-box {
     display: flex;
     color: rgba(147, 188, 244, 1);
@@ -92,7 +128,7 @@ export default {
       width: 32px;
       height: 32px;
       margin: 15px 0 0 3px;
-      border: 2px solid #93BCF4;
+      border: 2px solid #93bcf4;
     }
   }
 
@@ -144,14 +180,14 @@ export default {
   }
 }
 
-/deep/ .ant-input-affix-wrapper input{
+/deep/ .ant-input-affix-wrapper input {
   height: 30px;
   background: #93bcf4;
   border: none;
   border-radius: 40px;
-  color:#fff
+  color: #fff;
 }
-/deep/ .ant-input-affix-wrapper input::placeholder{
-    color:#fff;
+/deep/ .ant-input-affix-wrapper input::placeholder {
+  color: #fff;
 }
 </style>
