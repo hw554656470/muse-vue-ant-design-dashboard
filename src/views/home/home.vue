@@ -1,0 +1,133 @@
+<template>
+	<div class="main-container">
+		<div class="container-left">
+			<div>123123123
+				<br/>
+			</div>
+			<div>123123123
+				<br/>
+			</div>
+			<div>123123123
+				<br/>
+			</div>
+			<div>123123123
+				<br/>
+			</div>
+			<div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div><div>123123123
+				<br/>
+			</div>
+		</div>
+		<div class="container-right"></div>
+	</div>
+</template>
+  <script>
+export default {
+  data() {
+    return {
+      constants: {},
+    };
+  },
+  methods: {},
+};
+</script>
+  <style long="scss">
+</style>
+  

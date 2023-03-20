@@ -12,7 +12,11 @@ let routes = [
 	{
 		path: '/',
 		name: 'Home',
-		redirect: '/dashboard',
+		layout: "default",
+		// meta: {
+		// 	layoutClass: 'Layout-default',
+		// },
+		component: () => import('../views/home/home.vue'),
 	},
 	{
 		path: '/dashboard',
