@@ -7,7 +7,10 @@
           <a-layout>
             <defaultsidebar></defaultsidebar>
             <a-layout-content>
-              <router-view />
+              <!-- <router-view /> -->
+              <div style="position: relative">
+                <slot></slot>
+              </div>
             </a-layout-content>
           </a-layout>
           <defaultfooter></defaultfooter>
@@ -36,6 +39,6 @@ export default {
 <style long="scss">
 .ant-layout-content {
   height: 86vh;
-  padding: 20px 0;
+  padding: 20px 20px 20px 0;
 }
 </style>

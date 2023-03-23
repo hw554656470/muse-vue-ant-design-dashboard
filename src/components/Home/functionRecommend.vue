@@ -145,9 +145,9 @@ export default {
     display: flex;
     padding: 0;
     flex-wrap: wrap;
-    justify-content: space-between;
     li {
       margin-bottom: 20px;
+      margin-right: 20px;
     }
     .functionRecommend-box {
       display: flex;

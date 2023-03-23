@@ -5,7 +5,6 @@ Vue.use(VueRouter)
 
 let routes = [
 	{
-		// will match everything
 		path: '*',
 		component: () => import('../views/404.vue'),
 	},
@@ -13,11 +12,16 @@ let routes = [
 		path: '/',
 		name: 'Home',
 		layout: "default",
-		// meta: {
-		// 	layoutClass: 'Layout-default',
-		// },
 		component: () => import('../views/home/home.vue'),
 	},
+	{
+		path: '/visitorManagement',
+		name: 'visitorManagement',
+		layout: "default",
+		component: () => import('../views/visitorManagement/visitorManagement.vue'),
+	},
+
+
 	{
 		path: '/dashboard',
 		name: 'Dashboard',

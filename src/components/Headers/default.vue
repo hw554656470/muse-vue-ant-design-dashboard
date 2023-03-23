@@ -12,11 +12,13 @@
         </div>
         <div class="header-nav">
           <ul>
-            <li class="header-nav-seleted">首页</li>
-            <li>宿舍管理</li>
-            <li>访客管理</li>
-            <li class="header-nav-seleted">教务管理</li>
-            <li>考勤管理</li>
+            <li
+              v-for="(item, key) in data"
+              :key="key"
+              :class="isSeleted ? 'header-nav-seleted' : ''"
+            >
+              <a :href="item.href">{{ item.name }}</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -68,8 +70,29 @@
 export default {
   data() {
     return {
-      // Collapse navigation value.
-      // Binded model property for "Collapsible Navigation Menu" collapsed status .
+      data: [
+        {
+          href: "http://baidu.com",
+          name: "首页",
+          isSeleted: true,
+        },
+        {
+          href: "http://baidu.com",
+          name: "宿舍管理",
+        },
+        {
+          href: "http://localhost:8081/#/visitorManagement",
+          name: "访客管理",
+        },
+        {
+          href: "http://baidu.com",
+          name: "作业管理",
+        },
+        {
+          href: "http://baidu.com",
+          name: "充值管理",
+        },
+      ],
     };
   },
 };
@@ -108,9 +131,11 @@ export default {
           padding: 8px;
           font-family: Microsoft YaHei;
           font-weight: 400;
-          color: #ffffff;
           line-height: 22px;
           margin-left: 50px;
+          a {
+            color: #ffffff;
+          }
         }
       }
     }
