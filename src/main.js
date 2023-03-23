@@ -12,26 +12,38 @@ The above copyright notice and this permission notice shall be included in all c
 */
 
 import Vue from 'vue'
-import Antd from 'ant-design-vue';
+import Antd, { message } from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
 import App from './App.vue'
 import router from './router'
-
 import Layout from './layouts/Layout.vue';
 
+// 组件
+import Confirm from './components/Confirm/default.vue';
 
 
 import './scss/app.scss';
 
 Vue.use(Antd);
 
+Vue.component('confirm', Confirm);
+
+// 快捷消息处理
+message.config({
+  top: `50%`,
+  duration: 1,
+});
+Vue.prototype.$message = message;
+
+
 Vue.config.productionTip = false
 
-// Adding template layouts to the vue components.
+
 
 Vue.component("layout-default", Layout);
 
 new Vue({
   router,
+  message,
   render: h => h(App)
 }).$mount('#app')
