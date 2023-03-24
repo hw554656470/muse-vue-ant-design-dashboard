@@ -15,10 +15,22 @@ let routes = [
 		component: () => import('../views/home/home.vue'),
 	},
 	{
-		path: '/visitorManagement',
-		name: 'visitorManagement',
+		path: '/appointmentForApproval',
+		name: 'appointmentForApproval',
 		layout: "default",
-		component: () => import('../views/visitorManagement/visitorManagement.vue'),
+		component: () => import('../views/visitorManagement/appointmentForApproval.vue'),
+	},
+	{
+		path: '/accessQuery',
+		name: 'accessQuery',
+		layout: "default",
+		component: () => import('../views/visitorManagement/accessQuery.vue'),
+	},
+	{
+		path: '/invitationApplication',
+		name: 'invitationApplication',
+		layout: "default",
+		component: () => import('../views/visitorManagement/invitationApplication.vue'),
 	},
 
 

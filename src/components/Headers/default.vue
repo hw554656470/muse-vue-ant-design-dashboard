@@ -81,7 +81,7 @@ export default {
           name: "宿舍管理",
         },
         {
-          href: "http://localhost:8081/#/visitorManagement",
+          href: "http://localhost:8081/#/appointmentForApproval",
           name: "访客管理",
         },
         {

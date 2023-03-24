@@ -1,5 +1,8 @@
 <template>
     <a-card class="main-card">
+        <!-- 公用tab组件 -->
+        <publictab :tabs="tabs" :currentKey="0"></publictab>
+        <!-- 预约审批 -->
         <div class="main-container">
             <div class="main-container-form">
                 <a-input
@@ -186,7 +189,11 @@
             </div>
         </a-modal>
 
-        <confirm :message="confirmmessage" @closeconfirm="closeconfirm" v-if="msgVisible"></confirm>
+        <confirm
+            :message="confirmmessage"
+            @closeconfirm="closeconfirm"
+            v-if="msgVisible"
+        ></confirm>
     </a-card>
 </template>
 <script>
@@ -209,6 +216,17 @@ const rowSelection = {
 export default {
     data() {
         return {
+            // tabs数据
+            tabs: [
+                {
+                    title: "预约审批",
+                    key: "0",
+                    path: "/appointmentForApproval",
+                },
+                { title: "出入查询", key: "1", path: "/accessQuery" },
+                { title: "邀约申请", key: "2", path: "/invitationApplication" },
+            ],
+
             // form数据
             name: null,
             Nname: null,
@@ -288,6 +306,62 @@ export default {
                     code11: "邀约",
                     code12: "",
                 },
+                {
+                    code1: "张麻子",
+                    code2: "1723277112",
+                    code3: "38011199501054555",
+                    code4: "沪A17m23",
+                    code5: "2023.03.24 08:00:00",
+                    code6: "2023.03.24 10:30:00",
+                    code7: "陈曦予",
+                    code8: "学生",
+                    code9: "18235728412",
+                    code10: "探望小孩",
+                    code11: "邀约",
+                    code12: "",
+                },
+                {
+                    code1: "张麻子",
+                    code2: "1723277112",
+                    code3: "38011199501054555",
+                    code4: "沪A17m23",
+                    code5: "2023.03.24 08:00:00",
+                    code6: "2023.03.24 10:30:00",
+                    code7: "陈曦予",
+                    code8: "学生",
+                    code9: "18235728412",
+                    code10: "探望小孩",
+                    code11: "邀约",
+                    code12: "",
+                },
+                {
+                    code1: "张麻子",
+                    code2: "1723277112",
+                    code3: "38011199501054555",
+                    code4: "沪A17m23",
+                    code5: "2023.03.24 08:00:00",
+                    code6: "2023.03.24 10:30:00",
+                    code7: "陈曦予",
+                    code8: "学生",
+                    code9: "18235728412",
+                    code10: "探望小孩",
+                    code11: "邀约",
+                    code12: "",
+                },
+                {
+                    code1: "张麻子",
+                    code2: "1723277112",
+                    code3: "38011199501054555",
+                    code4: "沪A17m23",
+                    code5: "2023.03.24 08:00:00",
+                    code6: "2023.03.24 10:30:00",
+                    code7: "陈曦予",
+                    code8: "学生",
+                    code9: "18235728412",
+                    code10: "探望小孩",
+                    code11: "邀约",
+                    code12: "",
+                },
             ],
             rowSelection,
             expandedRowKeys: [],
@@ -305,15 +379,15 @@ export default {
                 status: ["邀约", "待审批"],
             },
 
-            confirmmessage:'保存成功！如果没有保存成功请联系技术人员：400-888-888', // 公用弹窗信息
-            msgVisible:false,
+            confirmmessage:
+                "保存成功！如果没有保存成功请联系技术人员：400-888-888", // 公用弹窗信息
+            msgVisible: false,
         };
     },
-    mounted() {
-    },
+    mounted() {},
     methods: {
-        closeconfirm(event){
-            this.msgVisible = event
+        closeconfirm(event) {
+            this.msgVisible = event;
         },
         handleChangeAgree(value) {
             this.agreeStatus = value;
@@ -324,14 +398,14 @@ export default {
         _showDetail() {
             this.visible = true;
         },
-        _showMsg(){
+        _showMsg() {
             this.msgVisible = true;
         },
         handleOk() {
             this.$message.success(`保存完成`);
             setTimeout(() => {
                 this.visible = false;
-            },2000);
+            }, 2000);
         },
     },
 };
@@ -346,7 +420,7 @@ export default {
     flex-wrap: wrap;
     justify-content: space-between;
     .main-container-form-input {
-        max-width: 300px;
+        max-width: 400px;
         margin-bottom: 15px;
     }
     .main-container-form-btn {
@@ -356,7 +430,7 @@ export default {
     }
 }
 .main-container-visitorlist {
-    // background: #fff;
+    margin-top: 20px;
     /deep/ .ant-table {
         background: #fff;
         border-radius: 8px;

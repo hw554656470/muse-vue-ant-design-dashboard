@@ -20,6 +20,9 @@ import Layout from './layouts/Layout.vue';
 
 // 组件
 import Confirm from './components/Confirm/default.vue';
+import PublicTab from './components/PublicTab.vue';
+
+Vue.component('tag-name',{})
 
 
 import './scss/app.scss';
@@ -27,6 +30,7 @@ import './scss/app.scss';
 Vue.use(Antd);
 
 Vue.component('confirm', Confirm);
+Vue.component('publictab',PublicTab)
 
 // 快捷消息处理
 message.config({
