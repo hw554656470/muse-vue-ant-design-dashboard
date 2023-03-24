@@ -56,6 +56,9 @@
                     <a-button type="primary" @click="_showDetail()"
                         >审核</a-button
                     >
+                    <a-button type="primary" @click="_showMsg()"
+                        >confirm</a-button
+                    >
                     <a-button type="primary">导出访客记录</a-button>
                 </div>
             </div>
@@ -183,7 +186,7 @@
             </div>
         </a-modal>
 
-        <confirm message="恭喜您添加成功"></confirm>
+        <confirm :message="confirmmessage" @closeconfirm="closeconfirm" v-if="msgVisible"></confirm>
     </a-card>
 </template>
 <script>
@@ -301,11 +304,17 @@ export default {
                 beizhu: "暂无",
                 status: ["邀约", "待审批"],
             },
+
+            confirmmessage:'保存成功！如果没有保存成功请联系技术人员：400-888-888', // 公用弹窗信息
+            msgVisible:false,
         };
     },
     mounted() {
     },
     methods: {
+        closeconfirm(event){
+            this.msgVisible = event
+        },
         handleChangeAgree(value) {
             this.agreeStatus = value;
         },
@@ -314,6 +323,9 @@ export default {
         },
         _showDetail() {
             this.visible = true;
+        },
+        _showMsg(){
+            this.msgVisible = true;
         },
         handleOk() {
             this.$message.success(`保存完成`);
